@@ -189,7 +189,12 @@
                     <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
                 </configuration>
             </plugin>
+
         </plugins>
+
+        <!-- Remove ${version} from name of war file -->
+            <finalName>${artifactId}</finalName>
+
     </build>
 
     <pluginRepositories>

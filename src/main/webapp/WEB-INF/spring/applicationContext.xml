@@ -4,6 +4,7 @@
              xmlns:beans="http://www.springframework.org/schema/beans"
              xmlns:context="http://www.springframework.org/schema/context"
              xmlns:tx="http://www.springframework.org/schema/tx"
+             xmlns:mvc="http://www.springframework.org/schema/mvc"
              xmlns:jpa="http://www.springframework.org/schema/data/jpa"
              xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
@@ -16,12 +17,15 @@
     <resources mapping="/img/**" location="/img/"/>
     <resources mapping="/css/**" location="/css/"/>
     <resources mapping="/js/**" location="/js/"/>
-    <resources mapping="/index.html" location="/index.html"/>
+    <!--<resources mapping="/index.html" location="/index.html"/>-->
+    <mvc:view-controller path="/" view-name="index"/>
 
     <beans:bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <beans:property name="prefix" value="/WEB-INF/views/"/>
-        <beans:property name="suffix" value=".jsp"/>
+        <beans:property name="prefix" value="/"/>
+        <beans:property name="suffix" value=".html"/>
+        <!--<beans:property name="prefix" value="/WEB-INF/views/"/>-->
+        <!--<beans:property name="suffix" value=".jsp"/>-->
     </beans:bean>
 
     <tx:annotation-driven/>
