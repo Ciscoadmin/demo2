@@ -5,7 +5,7 @@
   ports:
    - "5432:5432"
  jetty:
-  hostname: jetty:
+  hostname: jetty
   build: .
   dockerfile: Dockerfile_jetty
   ports:

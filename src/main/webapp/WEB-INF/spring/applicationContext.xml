@@ -17,7 +17,7 @@
     <resources mapping="/img/**" location="/img/"/>
     <resources mapping="/css/**" location="/css/"/>
     <resources mapping="/js/**" location="/js/"/>
-    <!--<resources mapping="/index.html" location="/index.html"/>-->
+    <resources mapping="/index.html" location="/index.html"/>
     <mvc:view-controller path="/" view-name="index"/>
 
     <beans:bean
