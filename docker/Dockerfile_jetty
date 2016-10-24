@@ -1,0 +1,2 @@
+FROM jetty:9.2-jre7
+ADD user.war /var/lib/jetty/webapps

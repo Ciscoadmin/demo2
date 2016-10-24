@@ -1,0 +1,14 @@
+ postgres:
+  build: .
+  dockerfile: Dockerfile_postgres
+  hostname: postgres
+  ports:
+   - "5432:5432"
+ jetty:
+  hostname: jetty:
+  build: .
+  dockerfile: Dockerfile_jetty
+  ports:
+   - "80:8080"
+  links:
+   - postgres:db

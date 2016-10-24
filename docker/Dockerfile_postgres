@@ -1,0 +1,6 @@
+FROM postgres:9.4
+MAINTAINER Demo_for_NYX
+ENV POSTGRES_USER docker
+ENV POSTGRES_PASSWORD nyx
+ENV POSTGRES_DB users
+ADD CreateUserTable.sql /docker-entrypoint-initdb.d/
