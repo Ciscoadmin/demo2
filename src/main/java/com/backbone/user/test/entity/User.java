@@ -1,18 +1,14 @@
 package com.backbone.user.test.entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 //@Table(name = "user")
 @Table(name = "\"USER\"") //We have to add \" because user is  reserved  word  in postgres!
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //for postgres  stability and for avoiding exception such as "InvalidDataAccessResourceUsageException: could not get next sequence value"
     @Column(name = "id")
     private Integer id;
 
