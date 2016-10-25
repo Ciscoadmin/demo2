@@ -193,7 +193,7 @@
         </plugins>
 
         <!-- Remove ${version} from name of war file -->
-            <finalName>${artifactId}</finalName>
+            <finalName>${project.artifactId}</finalName>
 
     </build>
 
