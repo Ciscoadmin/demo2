@@ -9,8 +9,8 @@
 
   <test name="AllInOne">
     <classes>
-      <!--<class name="com.backbone.user.test.tests.Sanity"/>-->
-      <!--<class name="com.backbone.user.test.tests.Security"/>-->
+      <class name="com.backbone.user.test.tests.Sanity"/>
+      <class name="com.backbone.user.test.tests.Security"/>
       <class name="com.backbone.user.test.tests.NegativeCases"/>
 
     </classes>
