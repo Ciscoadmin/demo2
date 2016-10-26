@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All scopes" verbose="5" parallel="false">
+
+  <parameter name="name" value="sanity"></parameter>
+  <parameter name="age" value="21"></parameter>
+  <parameter name="nameForDelete" value="remove"></parameter>
+  <parameter name="ageForUpdateUser" value="31"></parameter>
+
+  <test name="AllInOne">
+    <classes>
+      <!--<class name="com.backbone.user.test.tests.Sanity"/>-->
+      <!--<class name="com.backbone.user.test.tests.Security"/>-->
+      <class name="com.backbone.user.test.tests.NegativeCases"/>
+
+    </classes>
+  </test>
+</suite>
